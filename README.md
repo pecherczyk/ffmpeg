@@ -1,2 +1,2 @@
 # ffmpeg
-Bash scripts to converts video files
+Bash scripts to convert video files in loop
