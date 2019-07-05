@@ -17,6 +17,14 @@
 # capacity whether in hard disk, DVDs, flash drives or other devices and storage media.
 # K = 1000 should be used when you are thinking of throughput, ie the speed at which information is transferred.
 
+ffmpeg -h &>/dev/null
+
+if [ $? -ne 0 ]
+  then
+    printf "%s\n" "ffmpeg is not installed!"
+    exit 1
+fi
+
 printf "%s\n" "Enter output file size in MiB [MiB]";
 read capacity
 capacity=`echo "scale=0;$capacity*8192" | bc`;
